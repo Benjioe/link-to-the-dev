@@ -1,9 +1,11 @@
 import type {languageTrad} from "../types"
-import {destructuring, patternMatching, comprehensionList} from "../concepts"
+import {destructuring, patternMatching
+    , comprehensionList, tailCall} from "../concepts"
 import {prefixNotation} from "../syntax"
 import { functional } from "../paragism"
 import { firstClassFunction } from "../philosophies";
 import { withExample } from "./tools/withExample";
+import { withAlias } from "./tools/withAlias";
 
 export const clojure: languageTrad = {
     name: "clojure",
@@ -24,7 +26,14 @@ export const clojure: languageTrad = {
                 y [4 5]
                 :when (= (+ x y) 6)]
             [x y])
-            ;; => ([1 5] [2 4])`)
+            ;; => ([1 5] [2 4])`),
+        withExample(
+            withAlias(tailCall, "recur"), 
+            `(loop [x 0]
+                (println "Looping with " x)
+                (if (= x 2)
+                  (println "Done looping!")
+                  (recur (inc x))))`)
     ],
     philosophies: [firstClassFunction],
     syntax: [prefixNotation],
