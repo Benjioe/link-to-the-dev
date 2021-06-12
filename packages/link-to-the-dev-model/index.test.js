@@ -2,23 +2,26 @@
 import { getModel } from "./index";
 
 /**
- * @type {import("./data/types").concept[]}
+ * @type {import("./data/types").conceptData}
  */
-const _concepts = [{
-        name: "concept",
-        description: "description"
-}];
+const _concept = {
+    name: "concept",
+    description: "description"
+};
+const _concepts = [_concept];
+
 
 /**
- * @type {import("./data/types").language[]}
+ * @returns {import("./data/types").languageData}
  */
-const _languages = [{
+const createLanguages = (concepts) => [{
     name: "language",
-    concepts: _concepts,
+    concepts,
     paragism: [],
     philosophies: [],
     syntax: []
 }];
+const _languages = createLanguages(_concepts);
 
 const emptyArrayFunc = () => [];
 
@@ -29,6 +32,19 @@ it('return languages', () => {
 
     expect(languages).toStrictEqual(_languages)
 });
+
+it('when languages.concepts have alias, use it in name', () => {
+    const languageFunc = () => createLanguages([{
+        ..._concept,
+        alias: "alias"
+    }]);
+
+    const {languages} = getModel(languageFunc, emptyArrayFunc)("en");
+
+    const {name} = languages[0].concepts[0];
+    expect(name).toBe("alias (concept)")
+})
+
 
 it('return concept', () => {
     const conceptFunc = () => _concepts;

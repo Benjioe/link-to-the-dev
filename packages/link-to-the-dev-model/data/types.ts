@@ -18,9 +18,9 @@ export type languageData = {
     concepts: conceptLanguage[],
 };
 
-type conceptLanguage = {
-    concept: conceptData,
-    example: string
+type conceptLanguage = conceptData & {
+    example: string;
+    alias?: string
 }
 
 export type paragismData = {
