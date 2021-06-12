@@ -31,5 +31,78 @@
 			"}"
 		] 
 		
+	},
+	"concept" : {
+		"scope": "typescript",
+		"body": [
+			"import {conceptTrad} from \"../types\"",
+			"",
+			"export const ${TM_FILENAME_BASE}: conceptTrad = {",
+			"\ten: {",
+			"\t\tname: \"${TM_FILENAME_BASE}\",",
+			"\t\tdescription: \"\"",
+			"\t},",
+			"\tfr: {",
+			"\t\tname: \"prefix-notation\",",
+			"\t\tdescription: \"\"",
+			"\t},",
+			"};",
+		],
+		"description": "Create a concept"
+	},
+	"paragism": {
+		"scope": "typescript",
+		"body": [
+			"import { paragismTrad } from \"../types\"",
+			"",
+			"export const ${TM_FILENAME_BASE}: paragismTrad = {", 
+			"\ten: {",
+			"\t\tname: \"${TM_FILENAME_BASE}\",",
+			"\t\tdescription: \"\"",
+			"\t},",
+			"\tfr: {",
+			"\t\tname: \"prefix-notation\",",
+			"\t\tdescription: \"\"",
+			"\t},",
+			"};"
+		],
+		"description": "Create a paragism"
+	},
+	"philosophy": {
+		"scope": "typescript",
+		"body": [
+			"import { philosophyTrad } from \"../types\"",
+			"",
+			"export const ${TM_FILENAME_BASE}: philosophyTrad = {", 
+			"\ten: {",
+			"\t\tname: \"${TM_FILENAME_BASE}\",",
+			"\t\tdescription: \"\"",
+			"\t},",
+			"\tfr: {",
+			"\t\tname: \"prefix-notation\",",
+			"\t\tdescription: \"\"",
+			"\t},",
+			"};"
+		],
+		"description": "Create a philosophy"
+	},
+	"syntax": {
+		"scope": "typescript",
+		"body": [
+			"import type {syntaxTrad} from \"../types\"",
+			"",
+			"export const prefixNotation: syntaxTrad = {", 
+			"\ten: {",
+			"\t\tname: \"${TM_FILENAME_BASE}\",",
+			"\t\tdescription: \"\"",
+			"\t},",
+			"\tfr: {",
+			"\t\tname: \"prefix-notation\",",
+			"\t\tdescription: \"\"",
+			"\t},",
+			"};"
+		],
+		"description": "Create a syntax"
 	}
+
 }
