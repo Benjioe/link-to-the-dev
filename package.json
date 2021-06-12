@@ -1,0 +1,21 @@
+{
+  "name": "link-to-the-dev",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Benjioe/link-to-the-dev.git",
+  "author": "Ferrier Benjamin <matsique@yahoo.fr>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.12.2",
+    "tsc": "^2.0.3",
+    "typescript": "^4.3.2"
+  },
+  "scripts": {
+    "start": "yarn workspaces foreach -pvi run start"
+  }
+}
