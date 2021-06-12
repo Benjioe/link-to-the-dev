@@ -43,7 +43,7 @@
 			"\t\tdescription: \"\"",
 			"\t},",
 			"\tfr: {",
-			"\t\tname: \"prefix-notation\",",
+			"\t\tname: \"${TM_FILENAME_BASE}\",",
 			"\t\tdescription: \"\"",
 			"\t},",
 			"};",
@@ -61,7 +61,7 @@
 			"\t\tdescription: \"\"",
 			"\t},",
 			"\tfr: {",
-			"\t\tname: \"prefix-notation\",",
+			"\t\tname: \"${TM_FILENAME_BASE}\",",
 			"\t\tdescription: \"\"",
 			"\t},",
 			"};"
@@ -79,7 +79,7 @@
 			"\t\tdescription: \"\"",
 			"\t},",
 			"\tfr: {",
-			"\t\tname: \"prefix-notation\",",
+			"\t\tname: \"${TM_FILENAME_BASE}\",",
 			"\t\tdescription: \"\"",
 			"\t},",
 			"};"
@@ -97,7 +97,7 @@
 			"\t\tdescription: \"\"",
 			"\t},",
 			"\tfr: {",
-			"\t\tname: \"prefix-notation\",",
+			"\t\tname: \"${TM_FILENAME_BASE}\",",
 			"\t\tdescription: \"\"",
 			"\t},",
 			"};"
