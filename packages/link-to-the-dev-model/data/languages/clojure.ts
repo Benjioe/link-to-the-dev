@@ -1,10 +1,9 @@
 import type {languageTrad} from "../types"
-import {destructuring, patternMatching} from "../concepts"
+import {destructuring, patternMatching, comprehensionList} from "../concepts"
 import {prefixNotation} from "../syntax"
 import { functional } from "../paragism"
 import { firstClassFunction } from "../philosophies";
 import { withExample } from "./tools/withExample";
-import { comprehensionList } from "../concepts/comprehension-list";
 
 export const clojure: languageTrad = {
     name: "clojure",
