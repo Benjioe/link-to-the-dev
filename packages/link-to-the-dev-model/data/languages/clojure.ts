@@ -4,6 +4,7 @@ import {prefixNotation} from "../syntax"
 import { functional } from "../paragism"
 import { firstClassFunction } from "../philosophies";
 import { withExample } from "./tools/withExample";
+import { comprehensionList } from "../concepts/comprehension-list";
 
 export const clojure: languageTrad = {
     name: "clojure",
@@ -18,7 +19,13 @@ export const clojure: languageTrad = {
                 ([x] (myinc x 1))
                 ([x increment]
                 (+ x increment)))
-        `)
+        `),
+        withExample(comprehensionList, 
+            `(for [x [1 2 3]
+                y [4 5]
+                :when (= (+ x y) 6)]
+            [x y])
+            ;; => ([1 5] [2 4])`)
     ],
     philosophies: [firstClassFunction],
     syntax: [prefixNotation],
